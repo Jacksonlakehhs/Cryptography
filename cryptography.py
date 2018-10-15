@@ -20,9 +20,10 @@ char = x in list(associations)
 associations.find(char)
 associations[index]
 
-first = input("Enter e to encrypt, d to decrypt, or q to quit: ")
-message = ("Message: ")
+prompt = input("Enter e to encrypt, d to decrypt, or q to quit: ")
+
 key = input("Key: ")
 
-if first == "q":
-    #print("Goodbye! ")
+if prompt != "q":
+    message = input("Message: ")
+    for i in range(0, len(message))
