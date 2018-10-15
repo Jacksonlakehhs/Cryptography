@@ -12,18 +12,16 @@ See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptog
 #convert each one to a number that represents it, operate on that number, then convert back to a letter.
 
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
-l = list(associations)
-print(l)
 
-char = x in list(associations)
-
-associations.find(char)
-associations[index]
 
 prompt = input("Enter e to encrypt, d to decrypt, or q to quit: ")
 
-key = input("Key: ")
 
 if prompt != "q":
     message = input("Message: ")
-    for i in range(0, len(message))
+    key = input("Key: ")
+    for i in range(0, len(message)): 
+        nums = print(associations.find(message[i]) + associations.find(key[i]))
+
+else: 
+    print("Goodbye!")
