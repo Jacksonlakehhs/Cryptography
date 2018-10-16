@@ -15,11 +15,14 @@ associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .
 
 command = input("Enter e to encrypt, d to decrypt, or q to quit: ")
 
-if command != "q":
+if command == "e" or command == "d":
     message = input("Message: ")
     key = input("Key: ")
     for i in range(0, len(message)): 
         nums = (associations.find(message[i]) + associations.find(key[i]))
-
-else: 
+    L = list(nums)
+  #  C = [nums for i in list L]
+elif command == "q": 
     print("Goodbye!")
+else:
+    print("Did not understand command, try again.")
