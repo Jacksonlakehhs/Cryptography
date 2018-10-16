@@ -13,15 +13,13 @@ See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptog
 
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
 
+command = input("Enter e to encrypt, d to decrypt, or q to quit: ")
 
-prompt = input("Enter e to encrypt, d to decrypt, or q to quit: ")
-
-
-if prompt != "q":
+if command != "q":
     message = input("Message: ")
     key = input("Key: ")
     for i in range(0, len(message)): 
         nums = print(associations.find(message[i]) + associations.find(key[i]))
-
+    print(associations 
 else: 
     print("Goodbye!")
