@@ -22,7 +22,7 @@ if command == "e" or command == "d":
     for i in range(len(message)): 
         nums.append(associations.find(message[i]) + associations.find(key[i]))
     for x in nums:
-        print(associations[x])
+        print(associations[x], end = '')
 elif command == "q": 
     print("Goodbye!")
 else:
