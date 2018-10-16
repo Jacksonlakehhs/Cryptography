@@ -19,7 +19,7 @@ if command != "q":
     message = input("Message: ")
     key = input("Key: ")
     for i in range(0, len(message)): 
-        nums = print(associations.find(message[i]) + associations.find(key[i]))
-    print(associations 
+        nums = (associations.find(message[i]) + associations.find(key[i]))
+
 else: 
     print("Goodbye!")
