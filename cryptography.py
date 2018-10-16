@@ -18,10 +18,11 @@ command = input("Enter e to encrypt, d to decrypt, or q to quit: ")
 if command == "e" or command == "d":
     message = input("Message: ")
     key = input("Key: ")
-    for i in range(0, len(message)): 
-        nums = (associations.find(message[i]) + associations.find(key[i]))
-    L = list(nums)
-  #  C = [nums for i in list L]
+    nums=[]
+    for i in range(len(message)): 
+        nums.append(associations.find(message[i]) + associations.find(key[i]))
+    for x in nums:
+        print(associations[x])
 elif command == "q": 
     print("Goodbye!")
 else:
