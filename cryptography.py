@@ -12,26 +12,29 @@ See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptog
 #convert each one to a number that represents it, operate on that number, then convert back to a letter.
 
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
+command = "z"
 
-command = input("Enter e to encrypt, d to decrypt, or q to quit: ")
 
-if command == "e" or command == "d":
-    message = input("Message: ")
-    key = input("Key: ")
-    if len(message) > len(key):
-        key = len(message)*key
-    nums=[]
+while command != "q":
+    command = input("Enter e to encrypt, d to decrypt, or q to quit: ")
+    if command == "e" or command == "d":
+        message = input("Message: ")
+        key = input("Key: ")
+        if len(message) > len(key):
+            key = len(message)*key
+        nums=[]
     if command == "e":
         for i in range(len(message)): 
             nums.append(associations.find(message[i]) + associations.find(key[i]))
         for x in nums:
             print(associations[x], end = '')
+        print()
     if command == "d":
         for i in range(len(message)): 
             nums.append(associations.find(message[i]) - associations.find(key[i]))
         for x in nums:
             print(associations[x], end = '')
-elif command == "q": 
-    print("Goodbye!")
+    elif command == "q": 
+        print("Goodbye!")
 else:
     print("Did not understand command, try again.")
