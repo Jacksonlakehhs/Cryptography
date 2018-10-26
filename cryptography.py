@@ -23,18 +23,18 @@ while command != "q":
         if len(message) > len(key):
             key = len(message)*key
         nums=[]
-    if command == "e":
-        for i in range(len(message)): 
-            nums.append(associations.find(message[i]) + associations.find(key[i]))
-        for x in nums:
-            print(associations[x], end = '')
-        print()
-    if command == "d":
-        for i in range(len(message)): 
-            nums.append(associations.find(message[i]) - associations.find(key[i]))
-        for x in nums:
-            print(associations[x], end = '')
-    elif command == "q": 
-        print("Goodbye!")
-else:
-    print("Did not understand command, try again.")
+        if command == "e":
+            for i in range(len(message)): 
+                nums.append(associations.find(message[i]) + associations.find(key[i]))
+            for x in nums:
+                print(associations[x], end = '')
+            print()
+        if command == "d":
+            for i in range(len(message)): 
+                nums.append(associations.find(message[i]) - associations.find(key[i]))
+            for x in nums:
+                print(associations[x], end = '')
+    elif command != "q": 
+        print("Did not understand command. try again.")
+
+print("Goodbye")
