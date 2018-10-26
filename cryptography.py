@@ -34,7 +34,8 @@ while command != "q":
                 nums.append(associations.find(message[i]) - associations.find(key[i]))
             for x in nums:
                 print(associations[x], end = '')
+            print()
     elif command != "q": 
         print("Did not understand command. try again.")
 
-print("Goodbye")
+print("Goodbye!")
