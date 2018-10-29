@@ -25,7 +25,7 @@ while command != "q":
         nums=[]
         if command == "e":
             for i in range(len(message)): 
-                nums.append(associations.find(message[i]) + associations.find(key[i]))
+                thingnums.append(associations.find(message[i]) + associations.find(key[i]))
             for x in nums:
                 print(associations[x], end = '')
             print()
