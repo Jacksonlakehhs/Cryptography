@@ -25,15 +25,19 @@ while command != "q":
         nums=[]
         if command == "e":
             for i in range(len(message)): 
-                thing = nums.append(associations.find(message[i]) + associations.find(key[i]))
-                if thing >= 86:
-                    thing = 2(thing)
+                thing = associations.find(message[i]) + associations.find(key[i])
+                if thing >= 172:
+                    associations*2
+                nums.append(associations.find(message[i]) + associations.find(key[i]))
             for x in thing:
                 print(associations[x], end = '')
             print()
         if command == "d":
             for i in range(len(message)): 
-                thing = nums.append(associations.find(message[i]) - associations.find(key[i]))
+               thing = associations.find(message[i]) + associations.find(key[i])
+                if thing >= 172:
+                    associations*2
+                nums.append(associations.find(message[i]) + associations.find(key[i]))
             for x in thing:
                 print(associations[x], end = '')
             print()
