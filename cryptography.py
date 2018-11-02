@@ -31,13 +31,11 @@ while command != "q":
                 print(associations[thing], end = '')
             print()
         if command == "d":
-                #thing = associations.find(message[i]) - associations.find(key[i])
-               # if thing <= 0:
-               #     thing*-1 
             for i in range(len(message)):
-                nums.append(associations.find(message[i]) + associations.find(key[i]))
-            for x in nums:
-                print(associations[x], end = '')
+                thing = associations.find(message[i]) - associations.find(key[i])
+                if thing < 0:
+                    thing += 86
+                print(associations[thing], end = '')
             print()
     elif command != "q": 
         print("Did not understand command. try again.")
