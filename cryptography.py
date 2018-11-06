@@ -37,6 +37,6 @@ while command != "q":
                 print(associations[thing], end = '')
             print()
     elif command != "q": 
-        print("Did not understand command. try again.")
+        print("Did not understand command, try again.")
 
 print("Goodbye!")
