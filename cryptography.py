@@ -12,6 +12,7 @@ See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptog
 #convert each one to a number that represents it, operate on that number, then convert back to a letter.
 
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
+associations = associations*2
 command = "z"
 
 
@@ -26,8 +27,6 @@ while command != "q":
         if command == "e":
             for i in range(len(message)): 
                 thing = associations.find(message[i]) + associations.find(key[i])
-                if thing >= 86:
-                    associations = associations*2
                 print(associations[thing], end = '')
             print()
         if command == "d":
